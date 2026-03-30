@@ -1,5 +1,3 @@
-# O20 Cosmochrony Paper
-
 This repository contains the source of the **O20** Cosmochrony paper  
 [*Projective Persistence and the Physical Sub-Spectrum:
 A Dynamical Selection Criterion for the Capacity Exponent*](out/SpectralO20.pdf).
