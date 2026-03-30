@@ -1,0 +1,878 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+%\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\bstar}{\beta^*}
+
+\title{Projective Persistence and the Physical Sub-Spectrum:\\
+A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
+\large O20 --- Spectral Admissibility Sub-programme}
+\author{J.~Beau\\[0.5ex]
+\small Independent Researcher}
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    The O12--O19 sequence establishes that the physically relevant
+    observable on $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ is the
+    canonical pair-level quantity
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, with capacity exponent
+    $\delta_{\mathrm{pair}} \approx 7.44$ consistent with the
+    phenomenological target $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
+    However, the mechanism selecting $[7.4, 10.6]$ as the physical
+    sub-spectrum has not yet been identified.
+    The present paper proposes a \emph{projective persistence criterion}:
+    a fibre $\{c, q-c\}$ is physically admissible if and only if the
+    canonical observable reaches a Born--Infeld saturation threshold
+    $\sigma_{\mathrm{BI}}$ within the effective cascade window
+    $[n_0, n_1]$ defined by the pre-saturation regime.
+    Under two structural hypotheses --- that
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is a monotone function of
+    an effective fibre-level amplitude~[H1], and that this amplitude
+    inherits the Born--Infeld saturation bound
+    $A_n^{\max} = c_\chi/\sqrt{\lambda_n}$~[H2] --- the persistence
+    condition is equivalent to
+    $\delta_{\mathrm{pair}} \in [\delta_{\min}, \delta_{\max}]$,
+    where the endpoints are determined by $\sigma_{\mathrm{BI}}$,
+    $n_0$, and $n_1$.
+    The lower bound $\delta_{\min} \approx 7.4$ is shown to be
+    structurally consistent with the minimal fibre-level exponent
+    $2\,\delta_{c,\min}$ inherited from O16--O18; the upper bound
+    $\delta_{\max} \approx 10.6$ retains a phenomenological component,
+    imported via the O7 structural relation from the lepton mass window,
+    until $\sigma_{\mathrm{BI}}$ is derived from first principles.
+    The intrinsic derivation of $\sigma_{\mathrm{BI}}$ from the
+    Born--Infeld constraint $|\partial_t \chi_v| \leq c_\chi$ is
+    identified as the central open problem of the programme.
+
+    \medskip
+    \noindent\textbf{Keywords.}
+    spectral admissibility, non-injective projection, projective
+    persistence, Born--Infeld saturation, Weil representation,
+    canonical pair observable, capacity exponent, physical sub-spectrum
+  \end{abstract}
+
+  \clearpage
+  \tableofcontents
+
+\clearpage
+  \section{Introduction}
+    \label{sec:intro}
+
+    The spectral admissibility sub-programme of the Cosmochrony
+    framework~\cite{Cosmochrony} aims to identify the structural origin
+    of the observed hierarchy of effective mass scales from the dynamics
+    of a non-injective projection
+    $\Pi : \chi \to \mathcal{O}$
+    acting on a relational substrate~$\chi$.
+    In this framework, physical observables do not correspond to
+    individual configurations of~$\chi$, but to equivalence classes
+    induced by the projection.
+    The central problem is therefore not only to measure admissible
+    quantities, but to identify the correct \emph{observable class}
+    on which physical scaling laws are defined.
+
+    A sequence of works (O12--O19) has progressively refined this
+    identification.
+    O12 and O13~\cite{Beau2026a16,Beau2026a17} introduced a
+    representation-adapted observable on Heisenberg Cayley graphs, based
+    on the growth of the Gram--Schmidt span under breadth-first
+    exploration, and established a stable power-law decay with exponent
+    $\hat{\delta}_{\mathrm{exact}} \approx 3.72$.
+    However, O14 and O15~\cite{Beau2026a18,Beau2026a19} demonstrated
+    that this block-level observable, while mathematically correct,
+    cannot reproduce the phenomenological target range
+    $\delta \in [7.4, 10.6]$, and that no reweighting or aggregation
+    procedure can bridge this gap.
+    The discrepancy was shown to arise from an observable-class mismatch,
+    rather than from a limitation of the measurement.
+
+    O16~\cite{Beau2026a20} resolved this mismatch by identifying
+    conjugate pairs $\{c, q-c\}$ as the minimal invariant units of the
+    projection.
+    At this level, a new observable emerges whose scaling exponent
+    satisfies the exact doubling relation
+    $\delta_{\mathrm{pair}} = 2\,\delta_c$, yielding
+    $\delta_{\mathrm{pair}} \approx 7.44$, in agreement with the lower
+    boundary of the phenomenological range.
+    O17 and O18~\cite{Beau2026a21,Beau2026a22} subsequently established
+    that this pairing is not an empirical artefact but a structural
+    consequence of the non-injectivity of~$\Pi$, arising from the parity
+    invariance of the Born--Infeld action~\cite{Beau2026c} and realised
+    concretely in the Weil representation.
+    O19~\cite{Beau2026a23} completed this refinement by constructing a
+    canonical normalisation that removes residual pipeline-dependent
+    amplitude factors, yielding a unique, convention-free
+    observable~$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$.
+
+    At this stage, the observable is fixed, but a fundamental question
+    remains open.
+    While the exponent $\delta_{\mathrm{pair}} \approx 7.44$ lies within
+    the phenomenological target range, the mechanism selecting the
+    physical sub-spectrum $\delta \in [7.4, 10.6]$ has not yet been
+    identified.
+    In particular, it is not known whether this window can be derived
+    from first principles, or whether it must be regarded as an external
+    constraint imported from the lepton mass hierarchy via the O7
+    structural relation
+    $\beta^* = 1/(\delta + \tfrac{1}{2})$~\cite{Beau2026a11}.
+
+    The present paper addresses this question.
+    We propose a \emph{projective persistence criterion} for the
+    canonical fibre-level observable, expressing physical admissibility
+    as the requirement that the observable reaches a saturation
+    threshold within a finite cascade window.
+    This criterion is formulated conditionally on two hypotheses:
+    that $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is a monotone
+    function of an effective fibre-level amplitude~[H1], and that this
+    amplitude inherits a saturation bound from the Born--Infeld
+    constraint~[H2].
+    Under these hypotheses, the admissible range of exponents is shown
+    to arise from a purely structural condition on the cascade dynamics.
+
+    The resulting picture separates clearly three layers of the problem.
+    The existence of a stable power-law regime and the value
+    $\delta_{\mathrm{pair}} \approx 7.44$ are established results of
+    O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
+    The persistence criterion provides a structural mechanism capable
+    of selecting a finite admissible interval of exponents.
+    The derivation of the saturation threshold itself from the underlying
+    Born--Infeld dynamics remains an open problem, identified explicitly
+    in Section~\ref{sec:open}.
+
+    The paper is organised as follows.
+    Section~\ref{sec:observable-hierarchy} summarises the progressive
+    refinement of the observable from block-level to canonical
+    fibre-level form (O12--O19).
+    Section~\ref{sec:canonical-normalisation} recalls the canonical
+    normalisation construction of O19 and fixes the notational
+    conventions used throughout.
+    Section~\ref{sec:persistence-criterion} introduces the projective
+    persistence criterion, states the two hypotheses explicitly, and
+    derives the associated admissible window.
+    Section~\ref{sec:discussion} discusses the epistemic status of the
+    result and identifies the derivation of the intrinsic saturation
+    threshold as the central open problem of the programme.
+
+
+  \section{From Block Observables to the Canonical Fibre-Level Observable}
+    \label{sec:observable-hierarchy}
+
+    The O-series has refined the physically relevant observable through a
+    sequence of steps, each correcting the observable \emph{class} rather
+    than the measurement itself.
+    We summarise this hierarchy here; the purpose is to fix vocabulary
+    and to identify $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as the
+    unique convention-free input to which the persistence criterion of
+    Section~\ref{sec:persistence-criterion} applies.
+
+    \subsection{Block-level observable}
+      \label{sec:block-obs}
+
+      Papers O12 and O13~\cite{Beau2026a16,Beau2026a17} introduced the
+      Gram--Schmidt span tracker on Heisenberg Cayley graphs
+      $\mathrm{Cay}(G_q, S_q)$ with
+      $G_q = \mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ for prime $q$.
+      For a block of central character
+      $c \in (\mathbb{Z}/q\mathbb{Z})^\times$, the tracker records at
+      each BFS shell $S_n$ the cumulative span
+      $\Sigma^{(c)}(n) =
+      \dim \operatorname{span}\{\rho_c(g)v_0 : g \in B_n\}$,
+      where $B_n$ is the ball of radius $n$ and $v_0 \in \mathbb{C}^q$ is
+      a seed vector.
+      The normalised observable $\sigma_c(n)$, derived from
+      $\Sigma^{(c)}(n)$ by the O12/O13 pipeline, decays as a power law
+      \[
+        \sigma_c(n) \sim C_c\, n^{-\delta_c}
+      \]
+      in the pre-saturation regime $|B_n| \leq q^2$.
+      Fitting this law over a range of primes $q$ yields the universally
+      stable value
+      $\hat{\delta}_{\mathrm{exact}} \approx 3.72 \pm
+      0.06$~\cite{Beau2026a16,Beau2026a17}.
+
+      Empirically, $\sigma_c(n)$ is strictly decreasing over the
+      pre-saturation window (up to negligible fluctuations) for all tested
+      primes and initialisations; this monotonicity is inherited by the
+      pair observable $\sigma_{\mathrm{pair}}(n)$ and by its canonical
+      form $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$.
+
+      The cascade index $n$ is not itself a spectral parameter.
+      However, the observed power-law regime is empirically consistent with
+      an effective spectral scale $\lambda_n$ governing the admissibility
+      envelope, in the sense that the Born--Infeld bound
+      $A_n^{\max} \sim c_\chi / \sqrt{\lambda_n}$ can be expressed as a
+      function of the cascade rank $n$ (up to monotone reparametrisation);
+      see Hypothesis~\ref{hyp:H2} and Remark~\ref{rem:hyp-status}.
+
+      This block-level observable is mathematically well-defined and
+      correctly measures the admissible capacity of the individual Weil
+      representation $\rho_c$.
+      However, O14 and O15~\cite{Beau2026a18,Beau2026a19} established that
+      it does not constitute the physically final observable:
+      $\hat{\delta}_{\mathrm{exact}} \approx 3.72$ lies structurally below
+      the phenomenological target $\delta \in [7.4, 10.6]$, and O15
+      Corollary~4.8 proves that no reweighting of block-level data can
+      raise it above this value.
+      The obstacle is not a measurement error but an observable-class
+      mismatch: individual blocks $\rho_c$ are half-fibres of the
+      projection $\Pi$, not its minimal invariant units.
+
+    \subsection{Pair-level observable}
+      \label{sec:pair-obs}
+
+      O16~\cite{Beau2026a20} identified the resolution.
+      The projection $\Pi : \chi \to \mathcal{O}$ is non-injective by the
+      Born--Infeld constraint~\cite{Beau2026c}, and its minimal
+      non-injectivity in the Weil setting is a parity involution
+      $\Pi(c) = \Pi(q-c)$.
+      The physically relevant observable must therefore be defined on
+      conjugate pairs $\{c, q-c\}$:
+      \begin{equation}
+        \label{eq:sigma-pair}
+        \sigma_{\mathrm{pair}}(n) := \sigma_c(n)\,\sigma_{q-c}(n).
+      \end{equation}
+      The key structural fact, verified numerically to machine precision
+      in O16, is that $\delta_{q-c} = \delta_c$, so that the pair
+      exponent satisfies the exact doubling relation
+      \begin{equation}
+        \label{eq:delta-doubling}
+        \delta_{\mathrm{pair}} = 2\,\delta_c \approx 7.44,
+      \end{equation}
+      consistent with the phenomenological target $[7.4, 10.6]$.
+      A six-fold reduction in the local-slope variance relative to the
+      single-block observable, and a power-law fit with $R^2 > 0.9999$,
+      confirm that a genuine asymptotic scaling emerges only at the pair
+      level~\cite{Beau2026a20}.
+
+    \subsection{Fibre-level interpretation}
+      \label{sec:fibre-interp}
+
+      O17~\cite{Beau2026a21} provided the structural derivation of the
+      pair observable.
+      The exact conjugation identity $\rho_{q-c} = \overline{\rho_c}$,
+      combined with norm-invariance of the Gram--Schmidt process, implies
+      that the raw span dynamics of $\rho_c$ and $\rho_{q-c}$ are
+      identical under equal initial support (O17 Theorem~2.1).
+      The factor $r(c,q)$ appearing in the amplitude ratio
+      $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$ is consequently a
+      normalisation artefact of the pipeline, not an arithmetic invariant
+      of the representation (O17 Proposition~3.1).
+      The unique structurally robust consequence is $\delta_{q-c} =
+  \delta_c$, which is independent of pipeline normalisation.
+
+      O18~\cite{Beau2026a22} closed the remaining logical gap by deriving
+      the pairing from first principles.
+      Since the Born--Infeld action $S_{\mathrm{BI}}[\chi]$ is even in
+      $\chi$ (O18 Lemma~2.1), every projective fibre $\Pi^{-1}(y)$ must
+      contain the parity orbit $\{\chi, -\chi\}$.
+      Under the conditional hypothesis that parity is the only global
+      symmetry of $S_{\mathrm{BI}}$, the minimal fibre is exactly the
+      involution $\chi \mapsto -\chi$ (O18 Theorem~2.7).
+      In the Weil realisation of
+      $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, this abstract involution
+      is concretely realised as $c \leftrightarrow q-c$ via
+      $\rho_{q-c} = \overline{\rho_c}$ (O18 Theorem~3.3).
+      The conjugate pair $\{c, q-c\}$ is therefore the minimal fibre of
+      $\Pi$ in the Weil setting, and the identification of O16 is no
+      longer a hypothesis but a derived structural result.
+
+      This identification makes explicit that the passage from blocks to
+      pairs is not an empirical refinement but a structural consequence
+      of the non-injectivity of $\Pi$: fibres, not blocks, are the
+      invariant objects under the projection.
+
+      \begin{remark}[Observable was mis-identified, not mis-measured]
+        \label{rem:mis-identified}
+        Papers O14 and O15 correctly compute the admissible capacity at the
+        level of individual spectral blocks.
+        The move to the fibre-level observable of O16--O18 is not a
+        correction of O14--O15 but a change of observable class: the
+        non-injectivity of $\Pi$ acts at the level of fibres $\Pi^{-1}(y)$,
+        not at the level of individual blocks.
+        O15 closes the block-level programme; O16--O18 open and populate the
+        fibre-level programme.
+      \end{remark}
+
+    \subsection{Canonical pair observable}
+      \label{sec:canonical-obs}
+
+      We use the terms \emph{pair-level observable} and
+      \emph{fibre-level observable} interchangeably throughout this paper,
+      since conjugate pairs $\{c, q-c\}$ realise the minimal fibres of
+      $\Pi$ in the Weil setting (O18 Theorem~3.3).
+
+      The pair observable $\sigma_{\mathrm{pair}}(n)$
+      of~\eqref{eq:sigma-pair} retains a residual amplitude factor
+      $r(c,q) \in \{1,2,3,4\}$ that depends on the Gram--Schmidt
+      initialisation parameters $(b_1, b_2)$ of the O12/O13 pipeline.
+      O19~\cite{Beau2026a23} resolved this by making explicit the implicit
+      normalisation factor $D(c, b_1, b_2, n)$ of the pipeline and
+      classifying the dependence structure of $r(c,q)$ via two
+      independence tests (Test~P2 and Test~P3).
+      Three outcomes are possible: $r(c,q)$ is a pure basis artefact
+      (Case~A), a discrete instance invariant (Case~B), or a mixed
+      quantity admitting a decomposition
+      $r = r_{\mathrm{base}} \cdot r_{\mathrm{inst}}$ (Case~C); the
+      canonical normalisation appropriate to each case is constructed
+      explicitly.
+
+      \begin{definition}[Canonical pair observable, O19 Definition~7.1]
+        \label{def:sigma-can}
+        The canonical pair observable is
+        \[
+          \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+          := \sigma_c^{\mathrm{can}}(n)\,\sigma_{q-c}^{\mathrm{can}}(n),
+        \]
+        where $\sigma_c^{\mathrm{can}}(n)$ is the span observable computed
+        with the canonical normalisation of O19 Section~7.
+      \end{definition}
+
+      By O19 Proposition~7.2,
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is independent of the
+      choice of initial basis and block instance, up to corrections that
+      are $o(n^{-\delta_{\mathrm{pair}}})$ asymptotically.
+      By O19 Proposition~9.1, the capacity exponent
+      $\delta_{\mathrm{pair}}$ is unaffected by this canonicalisation: it
+      is a property of the scaling law, not of the amplitude
+      normalisation.
+
+      The distinction between the raw cumulative span $\Sigma^{(c)}(n)$
+      and the normalised observable $\sigma_c(n)$ is maintained
+      throughout this paper: $\Sigma^{(c)}(n) \in \mathbb{Z}_{\geq 0}$
+      is the integer-valued dimension of the spanned subspace;
+      $\sigma_c(n)$ is the normalised quantity derived from it;
+      $r(c,q)$ originates at the level of $\Sigma^{(c)}$ and propagates
+      into $\sigma_c$; the asymptotic exponent $\delta_c$ is defined at
+      the level of $\sigma_c(n)$.
+
+      In particular, any observable differing from
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ by a non-trivial
+      normalisation factor depending on $(b_1,b_2)$ or on the block
+      instance fails to define an intrinsic fibre-level quantity.
+      Up to asymptotically negligible corrections,
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is therefore the unique
+      observable compatible with the equivalence relation induced by the
+      projection $\Pi$, in the sense that it is invariant under all
+      transformations preserving fibre equivalence classes.
+
+      The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+      is the starting point of the present paper.
+      O20 applies to it the projective persistence criterion formulated in
+      Section~\ref{sec:persistence-criterion}; the exponent
+      $\delta_{\mathrm{pair}} \approx 7.44$ extracted from its scaling
+      law is the quantity whose membership in the physical sub-spectrum
+      $[7.4, 10.6]$ requires dynamical explanation.
+
+
+  \section{Canonical Normalisation of the Pair Observable}
+    \label{sec:canonical-normalisation}
+
+    This section recalls the essential results of
+    O19~\cite{Beau2026a23} that are used in
+    Section~\ref{sec:persistence-criterion}.
+    The goal is not to reproduce the construction of O19 but to fix the
+    notational conventions and to make explicit the level at which the
+    canonicalisation operates, so that
+    Section~\ref{sec:persistence-criterion} is self-contained with
+    respect to the definitions it requires.
+
+    \subsection{Pipeline dependence at the amplitude level}
+      \label{sec:pipeline-dependence}
+
+      The pair observable $\sigma_{\mathrm{pair}}(n)$
+      of~\eqref{eq:sigma-pair} is constructed from two single-block
+      observables $\sigma_c(n)$ and $\sigma_{q-c}(n)$.
+      Each of these is derived from the cumulative span $\Sigma^{(c)}(n)$
+      by the O12/O13 pipeline, which involves an implicit normalisation
+      factor
+      \[
+        D(c, b_1, b_2, n)
+      \]
+      depending on the central character $c$, the Gram--Schmidt
+      initialisation parameters $(b_1, b_2)$, and the BFS depth $n$,
+      but with an asymptotically constant contribution in $n$ in the
+      pre-saturation regime.
+      As a consequence, the amplitude of $\sigma_{\mathrm{pair}}(n)$
+      carries a residual factor $r(c,q) \in \{1,2,3,4\}$ whose value
+      depends on the choice of $(b_1, b_2)$ and, in general, on the
+      block instance.
+
+      Two structural facts, established in O17 and confirmed in
+      O19~\cite{Beau2026a21,Beau2026a23}, bound the scope of this
+      dependence precisely.
+      First, $r(c,q)$ is a pipeline artefact, not an arithmetic invariant
+      of the Weil representation $\rho_c$: it does not reflect any
+      intrinsic property of the conjugate pair $\{c, q-c\}$.
+      Second, and crucially, the pipeline dependence is \emph{entirely at
+  the amplitude level}: the asymptotic exponent
+      $\delta_{\mathrm{pair}}$ is unaffected by any change of
+      normalisation convention (O19 Proposition~9.1).
+      The canonicalisation problem is therefore decoupled from the
+      exponent extraction: $\delta_{\mathrm{pair}} \approx 7.44$ is a
+      stable result independent of the normalisation, while
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is needed only when the
+      amplitude itself enters a criterion --- as it does in the
+      persistence condition of
+      Section~\ref{sec:persistence-criterion}.
+
+    \subsection{Canonical normalisation}
+      \label{sec:canonical-def}
+
+      O19 makes $D(c, b_1, b_2, n)$ explicit and classifies the
+      dependence structure of $r(c,q)$ by two independence tests.
+      Test~P2 varies the initial basis $(b_1, b_2)$ at fixed block
+      instance; Test~P3 varies the block instance at rigidly fixed basis.
+      Three cases arise:
+      \begin{enumerate}[label=(\Alph*)]
+  \item $r(c,q)$ is a pure basis artefact, eliminable by a
+  canonical choice of initial frame;
+  \item $r(c,q)$ is a discrete instance invariant, requiring a
+  canonical quotient;
+  \item $r(c,q) = r_{\mathrm{base}} \cdot r_{\mathrm{inst}}$,
+  combining both components, each eliminated by the corresponding
+  procedure.
+      \end{enumerate}
+      In each case, O19 Section~7 constructs the canonical normalisation
+      explicitly.
+      We import its output as a definition.
+
+      \begin{definition}[Canonical pair observable]
+        \label{def:sigma-can-recap}
+        For $q$ an odd prime and
+        $c \in (\mathbb{Z}/q\mathbb{Z})^\times$, the canonical pair
+        observable is
+        \[
+          \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+          \;:=\; \sigma_c^{\mathrm{can}}(n)\;\sigma_{q-c}^{\mathrm{can}}(n),
+        \]
+        where $\sigma_c^{\mathrm{can}}(n)$ is the span observable of O19
+        Section~7, constructed under the canonical normalisation appropriate
+        to whichever of Cases~A, B, or~C holds.
+      \end{definition}
+
+    \subsection{Asymptotic invariance of the exponent}
+      \label{sec:exponent-invariance}
+
+      The relation between $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ and
+      the raw pair observable $\sigma_{\mathrm{pair}}(n)$ is
+      multiplicative: the canonical normalisation replaces $r(c,q)$ by a
+      factor that is either unity (Case~A after basis change), a constant
+      independent of~$n$ (Case~B after quotient), or a product of two
+      constants independent of~$n$ (Case~C after both steps).
+      In all cases the multiplicative factor is asymptotically constant
+      in $n$, so that
+      \[
+        \log \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+        = \log \sigma_{\mathrm{pair}}(n) + O(1), \qquad n \to \infty.
+      \]
+      The following proposition, proved in O19, is the key fact used in
+      Section~\ref{sec:persistence-criterion}.
+
+      \begin{proposition}[Exponent invariance under canonicalisation,
+        O19 Proposition~9.1]
+        \label{prop:exponent-invariance}
+        The capacity exponent
+        \[
+          \delta_{\mathrm{pair}}
+          \;=\; -\lim_{n \to \infty}
+          \frac{\Delta \log \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)}
+          {\Delta \log n}
+        \]
+        is unchanged under the canonical normalisation of
+        Definition~\textup{\ref{def:sigma-can-recap}}.
+        In particular, $\delta_{\mathrm{pair}} \approx 7.44$ is a property
+        of the scaling law of the pair observable, independent of the
+        pipeline normalisation convention.
+      \end{proposition}
+
+      \begin{remark}[Scope of O19 relative to O20]
+        \label{rem:O19-scope}
+        Proposition~\ref{prop:exponent-invariance} confirms that O19
+        operates strictly at the amplitude level.
+        The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+        is required in the present paper not to change the exponent, but
+        to ensure that the persistence threshold $\sigma_{\mathrm{BI}}$ of
+        Section~\ref{sec:persistence-criterion} is evaluated on a
+        convention-free quantity: a threshold condition applied to a
+        pipeline-dependent amplitude would inherit the arbitrary
+        factor~$r(c,q)$ and lose physical meaning.
+      \end{remark}
+
+
+  \section{Projective Persistence Criterion}
+    \label{sec:persistence-criterion}
+
+    We now formulate the central criterion of this paper.
+    The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+    established in O19~\cite{Beau2026a23} is a pipeline-independent
+    quantity; the question is what dynamical condition it must satisfy
+    for the fibre $\{c, q-c\}$ to be physically admissible.
+
+    \begin{hypothesis}[Monotone amplitude correspondence]
+      \label{hyp:H1}
+      The canonical pair observable
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is a strictly monotone
+      function of an effective fibre-level amplitude
+      $A_n^{\mathrm{fib}}$:
+      \[
+        \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+        = \Phi\!\left(A_n^{\mathrm{fib}}(n)\right),
+        \qquad \Phi \text{ strictly monotone decreasing.}
+      \]
+    \end{hypothesis}
+
+    \begin{hypothesis}[Born--Infeld amplitude bound]
+      \label{hyp:H2}
+      The effective fibre-level amplitude $A_n^{\mathrm{fib}}$ inherits
+      the Born--Infeld saturation bound
+      \[
+        A_n^{\mathrm{fib}} \leq A_n^{\max}
+        = \frac{c_\chi}{\sqrt{\lambda_n}},
+      \]
+      where $c_\chi$ is the substrate flux bound~\cite{Beau2026c} and
+      $\lambda_n$ is the effective spectral parameter at cascade rank~$n$.
+      Saturation occurs at $A_n^{\mathrm{fib}} = A_n^{\max}$, defining
+      an intrinsic threshold
+      \[
+        \sigma_{\mathrm{BI}}
+        \;:=\; \Phi\!\left(A_n^{\max}\right).
+      \]
+    \end{hypothesis}
+
+    \begin{remark}[Epistemic status of
+    \textup{[H\ref{hyp:H1}]} and \textup{[H\ref{hyp:H2}]}]
+      \label{rem:hyp-status}
+      Hypothesis~\ref{hyp:H1} is not yet derived from the Gram--Schmidt
+      span dynamics of O12/O13~\cite{Beau2026a16,Beau2026a17}.
+      What is established is that
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ measures the rank
+      increment of the spanned subspace under fibre-level projection;
+      the identification of this increment with a saturating amplitude
+      variable requires a further structural step left as an open problem
+      (Section~\ref{sec:open}).
+      Hypothesis~\ref{hyp:H2} is grounded in the Born--Infeld saturation
+      envelope $A_n^{\max} = c_\chi / \sqrt{\lambda_n}$, established for
+      individual spectral modes in~\cite{Beau2026c} and confirmed at the
+      non-perturbative DBI level.
+      The extension from modal amplitudes to fibre-level composite
+      observables is the missing link; $\sigma_{\mathrm{BI}}$ is therefore
+      not yet an explicit function of $(c_\chi, \lambda_c,
+      \lambda_{q-c})$.
+    \end{remark}
+
+    \begin{remark}[Motivation for Hypothesis~\ref{hyp:H1}]
+      \label{rem:H1-motivation}
+      The identification postulated in Hypothesis~\ref{hyp:H1} is not
+      arbitrary.
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is the only scalar
+      observable canonically associated with fibre-level redundancy growth
+      that is invariant under all admissible normalisations of the
+      pipeline (O19 Proposition~7.2).
+      A saturating amplitude is the only structural quantity exhibiting
+      comparable monotone depletion behaviour under the Born--Infeld
+      constraint.
+      Hypothesis~\ref{hyp:H1} asserts that these two depletion processes
+      are identified; deriving this identification from first principles
+      is Open Problem~\ref{op:H1-derivation}.
+    \end{remark}
+
+    \begin{proposition}[Projective persistence criterion]
+      \label{prop:persistence}
+      Under Hypotheses~\textup{\ref{hyp:H1}}
+      and~\textup{\ref{hyp:H2}}, let
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n) \sim
+      C n^{-\delta_{\mathrm{pair}}}$ on the pre-saturation window
+      $[n_0, n_1]$.
+      The fibre $\{c, q-c\}$ is projectively persistent if and only if
+      the canonical observable reaches the Born--Infeld threshold
+      $\sigma_{\mathrm{BI}}$ within the effective cascade window
+      $[n_0, n_1]$ defined by the pre-saturation regime:
+      \[
+        \exists\; n^* \in [n_0, n_1] :
+        \quad
+        \sigma_{\mathrm{pair}}^{\mathrm{can}}(n^*) = \sigma_{\mathrm{BI}}.
+      \]
+      Under the empirically established power-law ansatz, $n^*$ is
+      explicit:
+      \[
+        n^*(\delta_{\mathrm{pair}})
+        = \left(\frac{C}{\sigma_{\mathrm{BI}}}\right)^{1/\delta_{\mathrm{pair}}},
+      \]
+      and the persistence condition is equivalent to
+      \[
+        \delta_{\mathrm{pair}}
+        \;\in\;
+        \left[
+          \frac{\log(C/\sigma_{\mathrm{BI}})}{\log n_1},\;
+          \frac{\log(C/\sigma_{\mathrm{BI}})}{\log n_0}
+        \right]
+        \;=:\; [\delta_{\min}, \delta_{\max}].
+      \]
+    \end{proposition}
+
+    \begin{proof}
+      Strict monotonicity of $\Phi$ (Hypothesis~\ref{hyp:H1}) implies
+      that $\sigma_{\mathrm{pair}}^{\mathrm{can}}$ is strictly decreasing
+      in $n$; under the power-law ansatz it is continuous and surjective
+      onto $(0, C n_0^{-\delta_{\mathrm{pair}}})$.
+      The intermediate value theorem then guarantees existence and
+      uniqueness of $n^*$.
+      The persistence window $[\delta_{\min}, \delta_{\max}]$ follows by
+      inverting $n^*(\delta_{\mathrm{pair}}) \in [n_0, n_1]$.
+    \end{proof}
+
+    \begin{corollary}[Consistency with the measured exponent]
+      \label{cor:delta-consistency}
+      The measured value $\delta_{\mathrm{pair}} \approx 7.44$ from
+      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}
+      is consistent with
+      Proposition~\ref{prop:persistence} in the following sense.
+      \begin{enumerate}[label=(\roman*)]
+  \item The lower bound $\delta_{\min} \approx 7.4$ is not an
+  independent dynamical input.
+  It coincides with $2\,\delta_{c,\min} \approx 7.44$, the
+  minimal fibre-level exponent inherited from the block spectrum
+  by the conjugate-pair doubling of
+  O16~\cite{Beau2026a20}.
+  The measured $\delta_{\mathrm{pair}} \approx 7.44$ therefore
+  falls at the lower boundary of the persistence window,
+  consistently with it being the smallest structurally realised
+  fibre exponent.
+  \item The upper bound $\delta_{\max} \approx 10.6$ corresponds,
+  via the O7 structural relation
+  $\beta^* = 1/(\delta +
+  \tfrac{1}{2})$~\cite{Beau2026a11}, to the phenomenological
+  lower bound $\beta^*_{\min} \approx 0.09$ on the cascade
+  exponent~\cite{Beau2026a7}.
+  Its derivation from first principles --- i.e.\ as a consequence
+  of $\sigma_{\mathrm{BI}}$ and $[n_0, n_1]$ rather than an
+  input from lepton mass data --- remains open~\textup{[H2]}.
+  The role of $\sigma_{\mathrm{BI}}$ is not to fit the
+  phenomenological window, but to define an intrinsic admissibility
+  threshold independently of it; the consistency of
+  $\delta_{\mathrm{pair}} \approx 7.44$ with the interval
+  $[7.4, 10.6]$ is therefore a non-trivial posterior consistency
+  check, not a calibration condition.
+      \end{enumerate}
+    \end{corollary}
+
+    \begin{openproblem}[Intrinsic derivation of $\sigma_{\mathrm{BI}}$]
+      \label{op:sigma-BI}
+      The central open problem of this paper is to derive
+      $\sigma_{\mathrm{BI}}$ directly from the Born--Infeld saturation
+      constraint $|\partial_t \chi_v| \leq c_\chi$~\cite{Beau2026c},
+      without reference to the phenomenological window
+      $\beta^* \in (0.09, 0.13)$.
+      This requires establishing the missing link of
+      Hypothesis~\ref{hyp:H1}: the identification of
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as a monotone function of
+      a fibre-level saturating amplitude inheriting the bound
+      $A_n^{\max} = c_\chi/\sqrt{\lambda_n}$.
+    \end{openproblem}
+
+
+  \section{Discussion and Outlook}
+    \label{sec:discussion}
+
+    \subsection{What is established}
+      \label{sec:established}
+
+      The present paper rests on a foundation of results that are
+      independent of the hypotheses introduced in
+      Section~\ref{sec:persistence-criterion}.
+      We recall them here to separate what O20 inherits from what it
+      contributes.
+
+      The existence of a stable power-law regime
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+      \sim C n^{-\delta_{\mathrm{pair}}}$ on the pre-saturation window
+      $[n_0, n_1]$ is established in
+      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
+      The value $\delta_{\mathrm{pair}} \approx 7.44$, consistent with the
+      lower boundary of the phenomenological target $[7.4, 10.6]$, is
+      stable across all tested primes and initialisations.
+      The necessity of the fibre level --- the structural fact that
+      block-level observables are half-fibres of $\Pi$ and that no
+      aggregation of block data can recover the fibre-level exponent ---
+      is the combined result of O15 (aggregation no-go) and O17--O18
+      (structural
+      derivation)~\cite{Beau2026a19,Beau2026a21,Beau2026a22}.
+      The asymptotic invariance of $\delta_{\mathrm{pair}}$ under all
+      pipeline normalisations is O19
+      Proposition~9.1~\cite{Beau2026a23}, recalled here as
+      Proposition~\ref{prop:exponent-invariance}.
+
+      These results are not conditional.
+      They constitute the input to the present paper, not its conclusions.
+
+    \subsection{What is proposed}
+      \label{sec:proposed}
+
+      The central contribution of this paper is the projective persistence
+      criterion of Proposition~\ref{prop:persistence} and its conditional
+      derivation of an admissible exponent window.
+
+      Under Hypotheses~\ref{hyp:H1} and~\ref{hyp:H2}, the persistence
+      criterion translates physical admissibility into a
+      threshold-crossing condition: a fibre $\{c, q-c\}$ is projectively
+      persistent if and only if the canonical observable reaches the
+      Born--Infeld saturation level $\sigma_{\mathrm{BI}}$ within the
+      effective cascade window $[n_0, n_1]$ defined by the
+      pre-saturation regime.
+      This condition is not dynamical in the temporal sense: $n$ is a
+      cascade rank, not a physical time parameter, and the criterion
+      concerns the existence of a crossing rank $n^*$ rather than an
+      evolution equation.
+      Under the empirically established power-law ansatz, the persistence
+      condition is equivalent to
+      $\delta_{\mathrm{pair}} \in [\delta_{\min}, \delta_{\max}]$, where
+      the endpoints are determined by $\sigma_{\mathrm{BI}}$, $n_0$,
+      and $n_1$.
+
+      Corollary~\ref{cor:delta-consistency} shows that this framework is
+      consistent with the established results in two distinct ways.
+      The lower bound $\delta_{\min} \approx 7.4$ is not an independent
+      dynamical input: it coincides with $2\,\delta_{c,\min}$, the
+      minimal fibre-level exponent inherited from the block spectrum by
+      the conjugate-pair doubling of O16.
+      The upper bound $\delta_{\max} \approx 10.6$ corresponds, via the
+      O7 structural relation
+      $\beta^* = 1/(\delta + \tfrac{1}{2})$~\cite{Beau2026a11}, to the
+      phenomenological lower bound $\beta^*_{\min} \approx 0.09$
+      established in O3~\cite{Beau2026a7}.
+      The measured value $\delta_{\mathrm{pair}} \approx 7.44$ falls at
+      the lower boundary of the persistence window, which is the position
+      expected from the minimal fibre-level construction of
+      O16--O18~\cite{Beau2026a20,Beau2026a21,Beau2026a22}.
+
+    \subsection{What remains open}
+      \label{sec:open}
+
+      The conditional character of the results of
+      Section~\ref{sec:persistence-criterion} is explicit and intentional.
+      Three open problems organise the residual programme.
+
+      \begin{openproblem}[Intrinsic derivation of $\sigma_{\mathrm{BI}}$]
+        \label{op:sigma-BI-disc}
+        The saturation threshold $\sigma_{\mathrm{BI}}$ is introduced in
+        Hypothesis~\ref{hyp:H2} as a quantity fixed by the Born--Infeld
+        constraint $|\partial_t \chi_v| \leq c_\chi$~\cite{Beau2026c},
+        independently of the phenomenological window $[7.4, 10.6]$.
+        Its explicit derivation as a function of $(c_\chi, \lambda_c,
+        \lambda_{q-c})$ from the saturation envelope
+        $A_n^{\max} = c_\chi / \sqrt{\lambda_n}$ remains open.
+        Until this derivation is available, the upper bound
+        $\delta_{\max} \approx 10.6$ retains a phenomenological component,
+        imported via the O7 relation from the lepton mass window
+        $\beta^* \in (0.09, 0.13)$~\cite{Beau2026a7,Beau2026a11}.
+        This is the central open problem of the programme: deriving
+        $\sigma_{\mathrm{BI}}$ from $|\partial_t \chi_v| \leq c_\chi$
+        without reference to the phenomenological window would convert the
+        persistence criterion from a conditionally consistent structure into
+        a fully derived prediction, and would establish that the window
+        $[7.4, 10.6]$ is a consequence of the substrate dynamics rather
+        than an input calibrated to lepton mass data.
+      \end{openproblem}
+
+      \begin{openproblem}[Monotone amplitude correspondence]
+        \label{op:H1-derivation}
+        Hypothesis~\ref{hyp:H1} asserts that
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is a strictly monotone
+        function of an effective fibre-level amplitude
+        $A_n^{\mathrm{fib}}$.
+        This identification --- between the rank increment of the
+        Gram--Schmidt span and a saturating amplitude variable inheriting
+        the Born--Infeld bound --- is the missing structural link between
+        the spectral pipeline and the substrate dynamics.
+        Establishing it would promote both hypotheses to derived results and
+        render the persistence criterion a theorem rather than a conditional
+        proposition.
+      \end{openproblem}
+
+      \begin{openproblem}[Large-$q$ behaviour of the canonical window]
+        \label{op:large-q}
+        The persistence window $[\delta_{\min}, \delta_{\max}]$ is derived
+        under the power-law ansatz on the finite window $[n_0, n_1]$,
+        which depends on $q$.
+        The stability of this window as $q \to \infty$ --- equivalently,
+        whether the persistence criterion selects a $q$-independent
+        sub-spectrum in the large-prime limit --- is not established here.
+        This question is related to Open Problem~8.2 of
+        O19~\cite{Beau2026a23}, concerning the large-$q$ stability of the
+        canonical normalisation.
+      \end{openproblem}
+
+    \subsection{Perspectives}
+      \label{sec:perspectives}
+
+      Three directions extend naturally from the present paper.
+
+      \paragraph{Numerical testability.}
+        The persistence criterion of Proposition~\ref{prop:persistence} is
+        directly numerically testable, independently of the derivation of
+        $\sigma_{\mathrm{BI}}$ from first principles.
+        For a given prime $q$, the canonical observable
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ can be computed from the
+        O12/O13 pipeline with the canonical initialisation of
+        O19~\cite{Beau2026a23}.
+        Measuring the crossing rank $n^*$ across a range of pairs
+        $(c, q-c)$ and primes $q$ provides a direct empirical estimate of
+        the effective threshold $\sigma_{\mathrm{BI}}$, and allows a direct
+        test of whether the persistence window $[\delta_{\min},
+    \delta_{\max}]$ is consistent with the phenomenological target
+        $[7.4, 10.6]$ without invoking the O7 relation.
+
+      \paragraph{Extension beyond
+        $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.}
+        The persistence criterion is formulated for the Weil realisation of
+        $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, but its logical structure
+        does not depend on this specific group.
+        The same criterion applies to any setting in which a canonical
+        fibre-level observable satisfying a power-law decay can be
+        constructed.
+        Whether the persistence window is universal across groups, or
+        depends on representation-theoretic data specific to
+        $\mathrm{Heis}_3$, is an open question with implications for the
+        generality of the $\delta_{\mathrm{pair}} \to \beta^*$ programme.
+
+      \paragraph{Connection to the
+        $\delta_{\mathrm{pair}} \to \beta^*$ derivation.}
+        The present paper prepares, but does not complete, the fibre-level
+        derivation of the cascade exponent $\beta^*$.
+        O21 will verify that the structural conditions underlying the O7
+        growth law~\cite{Beau2026a11} are satisfied at the fibre level by
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}$, and derive the transfer
+        $\delta_{\mathrm{pair}} \approx 7.44 \mapsto \beta^* \approx 0.126$
+        as a legitimate consequence rather than a postulate.
+        The canonical observable and the persistence criterion established
+        here are the two structural prerequisites for that derivation.
+
+
+      \begin{thebibliography}{99}
+
+        \input{cosmochrony-bibliography}
+
+        \end{thebibliography}
+
+\end{document}
