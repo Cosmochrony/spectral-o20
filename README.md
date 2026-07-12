@@ -1,6 +1,6 @@
 This repository contains the source of the **O20** Cosmochrony paper  
-[*Projective Persistence and the Physical Sub-Spectrum:
-A Dynamical Selection Criterion for the Capacity Exponent*](out/SpectralO20.pdf).
+*Projective Persistence and the Physical Sub-Spectrum:
+A Dynamical Selection Criterion for the Capacity Exponent*.
 
 This work extends the **spectral admissibility sub-programme** by addressing
 the next structural issue left open by **O19**:
@@ -65,7 +65,7 @@ Under two structural hypotheses,
   function of an effective fibre-level amplitude
 - **[H2]** this amplitude inherits the Born–Infeld saturation bound
   \[
-  A_n^{\max}=\frac{c_\chi}{\sqrt{\lambda_n}}
+  A_n^{\max}=\frac{c_{\mathrm{BI}}}{\sqrt{\lambda_n}}
   \]
 
 the persistence condition becomes equivalent to an admissible exponent window
@@ -197,7 +197,7 @@ The main unresolved issue is now:
 > derive \(\sigma_{\mathrm{BI}}\) directly from the Born–Infeld saturation
 > constraint
 > \[
-> |\partial_t \chi_v|\le c_\chi
+> |\partial_t \chi_v|\le c_{\mathrm{BI}}
 > \]
 > without using the phenomenological window as input.
 
