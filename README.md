@@ -118,8 +118,9 @@ The paper recalls that:
   \]
   is structurally below the physical target range
 - O15 proved that no reweighting of block data can recover the target
-- O16–O18 showed that the correct observable lives at the fibre level
-- O19 made this fibre-level observable canonical at the amplitude level
+- O16–O18 motivate the pair-level observable (the reading of pairs as fibres of \(\Pi\)
+  remains the open bridge of O18 Remark 3.2)
+- O19 made this pair-level observable canonical at the amplitude level
 
 Thus O20 works entirely beyond the block-level mismatch.
 
@@ -161,13 +162,13 @@ The paper shows that the lower bound
 \[
 \delta_{\min}\approx 7.4
 \]
-is structurally consistent with the previously established fibre-level result
+is structurally consistent with the pair-level result
 \[
 \delta_{\mathrm{pair}}=2\,\delta_c \approx 7.44.
 \]
 
 So the lower edge of the physical window is not introduced ad hoc:
-it coincides with the minimal fibre-level exponent already realised by the
+it coincides with the pair-level exponent already realised by the
 pair construction of O16–O18.
 
 ## 5. The upper bound remains only partially derived
@@ -222,7 +223,7 @@ More precisely, the paper does the following:
   \delta_{\mathrm{pair}} \approx 7.44
   \]
   sits exactly at the lower edge of this window in the way expected from the
-  minimal fibre construction
+  pair construction
 
 The central point is:
 
@@ -237,7 +238,7 @@ A major feature of O20 is that it separates clearly:
 
 - the existence of the power-law regime
 - the measured value \(\delta_{\mathrm{pair}}\approx 7.44\)
-- the necessity of the fibre-level observable
+- the necessity of the pair-level observable (its fibre reading is an open bridge, O18 Remark 3.2)
 - the canonical amplitude normalisation of O19
 
 ## Conditional proposal
@@ -286,14 +287,14 @@ O20 occupies a very specific place in the O-series:
 
 - **O16**: pair observable identified
 - **O17**: pair dynamics derived
-- **O18**: fibre structure derived
+- **O18**: Born–Infeld parity established as an equivariant symmetry; the fibre identification
+  stated as an open problem
 - **O19**: canonical amplitude normalisation derived
 - **O20**: persistence criterion for the physical sub-spectrum derived
 
 Thus:
 
-- the observable is physically justified
-- the fibre structure is structurally grounded
+- the observable is structurally motivated (its fibre reading remains an open bridge)
 - the amplitude is canonical
 - the admissible sub-spectrum is now associated with a structural threshold
   criterion
@@ -334,14 +335,13 @@ This is the last structural step before the full fibre-level
 
 The spectral admissibility framework is now:
 
-- fibre-level grounded (**O18**)
+- parity-equivariant at the Born–Infeld level (**O18**), with the fibre identification open
 - amplitude-level canonical (**O19**)
 - persistence-level structured (**O20**)
 
 The pair observable is now:
 
-- physically justified
-- structurally derived
+- structurally motivated (fibre identification open, O18 Problem 2.8)
 - canonically normalised
 - equipped with a conditional physical admissibility criterion
 
@@ -377,7 +377,7 @@ The main remaining questions are now:
 The programme is now:
 
 - observationally well-defined (**O17**)
-- structurally grounded (**O18**)
+- parity-equivariant, with the fibre identification stated as an open problem (**O18**)
 - canonically normalised (**O19**)
 - conditionally selection-based (**O20**)
 
