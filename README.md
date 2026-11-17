@@ -5,9 +5,15 @@ A Dynamical Selection Criterion for the Capacity Exponent*.
 This work extends the **spectral admissibility sub-programme** by addressing
 the next structural issue left open by **O19**:
 
-> Once the physically relevant observable has been fixed at the canonical
-> fibre level, what selects the physical sub-spectrum
-> \(\delta \in [7.4, 10.6]\)?
+> Given a supplied observable, threshold and power law, which exponent interval corresponds to
+> a crossing within a specified cascade window?
+
+**Version 1.17.** The former physical interpretation of $[7.4,10.6]$ is withdrawn.
+O6 proves only $\beta_{\mathrm{eff}}\leq1/(\alpha+1/2)$ under its effective growth hypothesis
+(G_R) and a power-law redundancy Ansatz in the exploration variable $p$.
+Its countermodel $\alpha=8$, $p=n^{1/17}$ satisfies those premises but refutes equality.
+The reciprocal is retained only as a defined legacy diagnostic; the historical range $[7.4,10.6]$
+is neither a necessary nor a sufficient condition selecting the charged-lepton cascade window.
 
 # Context
 
@@ -31,9 +37,8 @@ This closed the normalisation problem of **O19**:
 
 - the observable class had already been fixed by **O16–O18**
 - the amplitude is now canonically normalised
-- the remaining question is no longer what the correct observable is,
-  but why the physical sub-spectrum is restricted to
-  \([7.4, 10.6]\)
+- the threshold-crossing template must determine its own symbolic interval;
+  it supplies no physical restriction to the historical range $[7.4,10.6]$
 
 This defines the scope of **O20**.
 
@@ -156,40 +161,17 @@ and therefore the admissible interval
 \right].
 \]
 
-## 4. Structural interpretation of the lower bound
+## 4. No derived numerical lower endpoint
 
-The paper shows that the lower bound
-\[
-\delta_{\min}\approx 7.4
-\]
-is structurally consistent with the pair-level result
-\[
-\delta_{\mathrm{pair}}=2\,\delta_c \approx 7.44.
-\]
+The doubling identity $\delta_{\mathrm{pair}}=2\delta_c$ does not select $\delta_c$ or the number 7.4.
+A supplied value near 7.44 lies in the historical comparison range, but does not fix the lower endpoint
+of the threshold interval.
 
-So the lower edge of the physical window is not introduced ad hoc:
-it coincides with the pair-level exponent already realised by the
-pair construction of O16–O18.
+## 5. No reciprocal inference of an upper endpoint
 
-## 5. The upper bound remains only partially derived
-
-The upper bound
-\[
-\delta_{\max}\approx 10.6
-\]
-is not yet derived from substrate dynamics alone.
-
-At this stage, it still carries a phenomenological component imported through
-the O7 structural relation
-\[
-\beta^*=\frac{1}{\delta+\tfrac{1}{2}}
-\]
-from the lepton-mass window
-\[
-\beta^* \in (0.09,0.13).
-\]
-
-O20 is explicit about this status.
+The value 10.6 is not an endpoint consequence of O6/O7 or of the persistence hypotheses.
+The old equality cannot be used to infer it from $\beta^*\in(0.09,0.13)$.
+The threshold, amplitude and cascade window must determine their own endpoints.
 
 ## 6. The central open problem is identified precisely
 
@@ -203,13 +185,12 @@ The main unresolved issue is now:
 > without using the phenomenological window as input.
 
 This is the key problem that separates a conditionally consistent persistence
-window from a fully derived prediction.
+window from a physical construction; supplying the threshold alone would not select numerical endpoints.
 
 # Mathematical Role of O20
 
-The mathematical contribution of O20 is to convert the physical window
-\([7.4,10.6]\) from a mere compatibility range into the image of a structural
-selection criterion.
+The mathematical contribution is a symbolic threshold-crossing interval under explicit premises.
+It does not convert $[7.4,10.6]$ into a derived physical selection window.
 
 More precisely, the paper does the following:
 
@@ -222,8 +203,7 @@ More precisely, the paper does the following:
   \[
   \delta_{\mathrm{pair}} \approx 7.44
   \]
-  sits exactly at the lower edge of this window in the way expected from the
-  pair construction
+  can be compared numerically with the historical range, without fixing either endpoint
 
 The central point is:
 
@@ -290,17 +270,16 @@ O20 occupies a very specific place in the O-series:
 - **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
 - **O19**: canonical amplitude normalisation derived
-- **O20**: persistence criterion for the physical sub-spectrum derived
+- **O20**: conditional threshold-crossing template, with no selected numerical exponent window
 
 Thus:
 
 - the observable is structurally motivated (its fibre reading remains an open bridge)
 - the amplitude is canonical
-- the admissible sub-spectrum is now associated with a structural threshold
-  criterion
+- a supplied threshold defines a symbolic crossing interval; its physical interpretation remains conditional
 
-This is the last structural step before the full fibre-level
-\(\delta_{\mathrm{pair}}\to\beta^*\) derivation.
+Neither the persistence criterion nor a later fibre identification repairs the false O6/O7 equality.
+The reciprocal evaluation remains a legacy numerical comparison.
 
 # What O20 Adds
 
@@ -315,15 +294,8 @@ This is the last structural step before the full fibre-level
   \[
   \delta_{\mathrm{pair}} \in [\delta_{\min},\delta_{\max}]
   \]
-- structural interpretation of the lower bound
-  \[
-  \delta_{\min}\approx 7.4
-  \]
-- explicit statement that the upper bound
-  \[
-  \delta_{\max}\approx 10.6
-  \]
-  still retains a phenomenological component
+- separation of the symbolic interval from the historical benchmarks 7.4 and 10.6
+- withdrawal of the inference of either endpoint from doubling or the former reciprocal equality
 - explicit identification of the intrinsic derivation of
   \(\sigma_{\mathrm{BI}}\) as the central open problem
 - a fully explicit separation between:
@@ -361,12 +333,9 @@ The main remaining questions are now:
    Determine whether the selected sub-spectrum remains stable in the
    large-prime limit
 
-4. **Full fibre-level \(\delta_{\mathrm{pair}}\to\beta^*\) derivation (O21)**  
-   Verify that the O7 structural growth law applies at the fibre level and
-   derive
-   \[
-   \delta_{\mathrm{pair}} \approx 7.44 \mapsto \beta^* \approx 0.126
-   \]
+4. **Capacity-to-rate boundary (O21)**
+   Neither shell alignment nor an additional transport identification implies the reciprocal equality.
+   A physical rate needs an independently justified growth carrier and selection mechanism.
 
 5. **Extension beyond the current Weil/Heisenberg setting**  
    Determine how universal the persistence criterion is across broader
