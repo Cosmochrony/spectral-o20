@@ -121,13 +121,13 @@ The paper recalls that:
   \[
   \hat{\delta}_{\mathrm{exact}} \approx 3.72
   \]
-  is structurally below the physical target range
-- O15 proved that no reweighting of block data can recover the target
+  lies below the historical comparison range, which is not a necessary physical-rate condition
+- O15 studies specified conditional reweighting and aggregation procedures for the block data
 - O16–O18 motivate the pair-level observable (the reading of pairs as fibres of \(\Pi\)
   remains the open bridge of O18 Remark 3.2)
 - O19 made this pair-level observable canonical at the amplitude level
 
-Thus O20 works entirely beyond the block-level mismatch.
+O20 studies a pair-level observable; this change alone does not select a physical rate.
 
 ## 3. Conditional persistence criterion
 
