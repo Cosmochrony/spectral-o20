@@ -10,7 +10,7 @@ the next structural issue left open by **O19**:
 
 **Version 1.18.** The historical value $\delta_{\mathrm{pair}}\approx7.44$ is no longer attributed to O16,
 which asserts no numerical exponent. O19 1.3 withdraws its claim to construct a pipeline-independent canonical
-observable: its independence tests P2/P3 are open and its former Proposition 7.2 is now Open
+observable: its own residual factor is trivial ($r\equiv1$, Lemma 2.4) and its former Proposition 7.2 is now Open
 Problem 7.2. O20 uses the O19 canonical observable as a proposed, case-dependent observable, not as a
 constructed convention-free one. The values $r(c,q)\in\{1,2,3,4\}$ are a historical hypothesis; on the
 real O12/O13 pipeline O16's conjugate-block identity forces $r\equiv1$ within its contract, and O17's
@@ -32,7 +32,7 @@ is neither a necessary nor a sufficient condition selecting the charged-lepton c
   \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
   \]
   intended to remove a residual amplitude ambiguity of the O12/O13 Gram–Schmidt pipeline;
-  its independence tests are open and its pipeline independence is not established
+  its own residual factor is trivial ($r\equiv1$, O19 Lemma 2.4) and its pipeline independence is not established
 - that a constant normalisation factor leaves the exponent \(\delta_{\mathrm{pair}}\) unchanged
 
 The historical comparison value \(\delta_{\mathrm{pair}} \approx 7.44\) is not asserted by O16.
@@ -129,7 +129,7 @@ The paper recalls that:
 - O15 studies specified conditional reweighting and aggregation procedures for the block data
 - O16–O18 motivate the pair-level observable (the reading of pairs as fibres of \(\Pi\)
   remains the open bridge of O18 Remark 3.2)
-- O19 proposes a canonical amplitude normalisation for this pair-level observable, with open tests
+- O19 proposes a canonical amplitude normalisation for this pair-level observable, not established as pipeline independent
 
 O20 studies a pair-level observable; this change alone does not select a physical rate.
 
@@ -145,7 +145,7 @@ such that
 \sigma_{\mathrm{pair}}^{\mathrm{can}}(n^*)=\sigma_{\mathrm{BI}}.
 \]
 
-Under the power-law ansatz (an input for the uncorrected pair observable; O19's canonical normalisation has open tests)
+Under the power-law ansatz (an input for the uncorrected pair observable; O19's canonical normalisation is not established as pipeline independent)
 \[
 \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)\sim C\,n^{-\delta_{\mathrm{pair}}},
 \]
@@ -222,7 +222,7 @@ A major feature of O20 is that it separates clearly:
 
 ## Conditional proposal
 
-- the canonical amplitude normalisation proposed in O19 (open tests, Open Problem 7.2)
+- the canonical amplitude normalisation proposed in O19 (not established as pipeline independent, Open Problem 7.2)
 - the identification of persistence with threshold crossing
 - the interpretation of
   \(\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)\)
@@ -269,7 +269,7 @@ O20 occupies a very specific place in the O-series:
 - **O17**: pair dynamics derived
 - **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
-- **O19**: canonical amplitude normalisation proposed, with open tests
+- **O19**: canonical amplitude normalisation proposed, not established as pipeline independent
 - **O20**: conditional threshold-crossing template, with no selected numerical exponent window
 
 Thus:
@@ -308,7 +308,7 @@ The reciprocal evaluation remains a legacy numerical comparison.
 The spectral admissibility framework is now:
 
 - parity-equivariant at the Born–Infeld level (**O18**), with the fibre identification open
-- amplitude normalisation proposed, with open tests (**O19**)
+- amplitude normalisation proposed, not established as pipeline independent (**O19**)
 - persistence-level structured (**O20**)
 
 The pair observable is now:
