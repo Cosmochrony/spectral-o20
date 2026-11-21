@@ -156,9 +156,9 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
     to arise from a purely structural condition on the cascade dynamics.
 
     The resulting picture separates clearly three layers of the problem.
-    The existence of a stable power-law regime and the value
-    $\delta_{\mathrm{pair}} \approx 7.44$ are established results of
-    O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
+    A power-law regime and the value $\delta_{\mathrm{pair}} \approx 7.44$ are inputs taken from
+    O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23} for the uncorrected pair
+    observable; the canonical normalisation of O19 has open tests.
     The persistence criterion provides a structural mechanism capable
     of selecting a finite admissible interval of exponents.
     The derivation of the saturation threshold itself from the underlying
@@ -259,18 +259,17 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
         \label{eq:sigma-pair}
         \sigma_{\mathrm{pair}}(n) := \sigma_c(n)\,\sigma_{q-c}(n).
       \end{equation}
-      The key structural fact, verified numerically to machine precision
-      in O16, is that $\delta_{q-c} = \delta_c$, so that the pair
-      exponent satisfies the exact doubling relation
+      O16~\cite{Beau2026a20} shows that \emph{if} the ratio $\sigma_{q-c}/\sigma_c$ is
+      independent of the shell index, the pair exponent satisfies the exact doubling relation
       \begin{equation}
         \label{eq:delta-doubling}
-        \delta_{\mathrm{pair}} = 2\,\delta_c \approx 7.44,
+        \delta_{\mathrm{pair}} = 2\,\delta_c ,
       \end{equation}
-      consistent with the historical comparison range $[7.4, 10.6]$.
-      A six-fold reduction in the local-slope variance relative to the
-      single-block observable, and a power-law fit with $R^2 > 0.9999$,
-      confirm that a genuine asymptotic scaling emerges only at the pair
-      level~\cite{Beau2026a20}.
+      and that on the real O12/O13 pipeline its exact conjugate-block identity makes the ratio
+      identically~$1$.
+      O16 asserts no numerical value of the exponent: the historical value $7.44$, its
+      comparison with the range $[7.4, 10.6]$, and the earlier variance-reduction and $R^2$
+      figures are withdrawn there as unsourced.
 
     \subsection{Fibre-level interpretation}
       \label{sec:fibre-interp}
@@ -376,11 +375,10 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       into $\sigma_c$; the asymptotic exponent $\delta_c$ is defined at
       the level of $\sigma_c(n)$.
 
-      In particular, any observable differing from
+      If O19 Open Problem~7.2 were resolved positively, any observable differing from
       $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ by a non-trivial
       normalisation factor depending on $(b_1,b_2)$ or on the block
-      instance fails to define an intrinsic fibre-level quantity.
-      If that open problem were resolved positively,
+      instance would fail to define an intrinsic fibre-level quantity, and
       $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ would be invariant, up to asymptotically
       negligible corrections, under all transformations preserving fibre equivalence classes;
       neither this invariance nor uniqueness is established.
@@ -388,9 +386,9 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
       is the starting point of the present paper.
       O20 applies to it the projective persistence criterion formulated in
-      Section~\ref{sec:persistence-criterion}; the exponent
-      $\delta_{\mathrm{pair}} \approx 7.44$ extracted from its scaling
-      law is the quantity previously compared with the historical range
+      Section~\ref{sec:persistence-criterion}; the historical exponent
+      $\delta_{\mathrm{pair}} \approx 7.44$, extracted from the uncorrected pair observable,
+      is the quantity previously compared with the historical range
       $[7.4,10.6]$; that comparison does not define a physical sub-spectrum.
 
 
@@ -508,9 +506,9 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
         \]
         is unchanged under the canonical normalisation of
         Definition~\textup{\ref{def:sigma-can-recap}}.
-        In particular, $\delta_{\mathrm{pair}} \approx 7.44$ is a property
-        of the scaling law of the pair observable, independent of the
-        pipeline normalisation convention.
+        In particular, $\delta_{\mathrm{pair}}$ is a property
+        of the scaling law of the pair observable, independent of a constant
+        normalisation factor.
       \end{proposition}
 
       \begin{remark}[Scope of O19 relative to O20]
@@ -696,11 +694,13 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       We recall them here to separate what O20 inherits from what it
       contributes.
 
-      The existence of a stable power-law regime
-      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
+      A power-law regime
+      $\sigma_{\mathrm{pair}}(n)
       \sim C n^{-\delta_{\mathrm{pair}}}$ on the pre-saturation window
-      $[n_0, n_1]$ is established in
-      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23}.
+      $[n_0, n_1]$ is an input taken from
+      O16--O19~\cite{Beau2026a20,Beau2026a21,Beau2026a22,Beau2026a23} for the uncorrected
+      pair observable; for the canonical observable of O19 it is not established, since that
+      normalisation has open tests.
       The value $\delta_{\mathrm{pair}} \approx 7.44$, consistent with the
       historical comparison range $[7.4,10.6]$, is
       stable across all tested primes and initialisations.
@@ -711,12 +711,12 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       Theorem~3.1)~\cite{Beau2026a19,Beau2026a21,Beau2026a22};
       the reading of pairs as fibres of $\Pi$ remains the open bridge of
       O18 Remark~3.2.
-      The asymptotic invariance of $\delta_{\mathrm{pair}}$ under all
-      pipeline normalisations is O19
+      The invariance of $\delta_{\mathrm{pair}}$ under a constant
+      normalisation factor is O19
       Proposition~9.1~\cite{Beau2026a23}, recalled here as
       Proposition~\ref{prop:exponent-invariance}.
 
-      These results are not conditional.
+      These inputs are conditional on the open O19 normalisation.
       They constitute the input to the present paper, not its conclusions.
 
     \subsection{What is proposed}
@@ -809,9 +809,9 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
         directly numerically testable, independently of the derivation of
         $\sigma_{\mathrm{BI}}$ from first principles.
         For a given prime $q$, the canonical observable
-        $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ can be computed from the
-        O12/O13 pipeline with the canonical initialisation of
-        O19~\cite{Beau2026a23}.
+        $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ could be computed from the
+        O12/O13 pipeline once the case of O19~\cite{Beau2026a23} is identified; until then
+        the computable quantity is the uncorrected pair observable.
         Measuring the crossing rank $n^*$ across a range of pairs
         $(c, q-c)$ and primes $q$ provides a direct empirical estimate of
         the effective threshold $\sigma_{\mathrm{BI}}$, and allows a direct

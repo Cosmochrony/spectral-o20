@@ -146,7 +146,7 @@ such that
 \sigma_{\mathrm{pair}}^{\mathrm{can}}(n^*)=\sigma_{\mathrm{BI}}.
 \]
 
-Under the empirically established power-law ansatz
+Under the power-law ansatz (an input for the uncorrected pair observable; O19's canonical normalisation has open tests)
 \[
 \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)\sim C\,n^{-\delta_{\mathrm{pair}}},
 \]
