@@ -32,7 +32,7 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
 \large O20 --- Spectral Admissibility Sub-programme}
 \author{J.~Beau\\[0.5ex]
 \small Independent Researcher}
-\date{2026\\Version 1.17}
+\date{2026\\Version 1.18}
 
 \begin{document}
 
@@ -40,7 +40,9 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
 
   \begin{abstract}
     The canonical pair-level observable on $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$
-    was compared with the historical exponent range $[7.4,10.6]$.
+    was compared with the historical exponent range $[7.4,10.6]$; its normalisation is the
+    case-dependent proposal of O19, whose independence tests are open, so it is used here as a
+    proposed observable, not a constructed convention-free one.
     That range is not a condition for the charged-lepton cascade window: O6 proves only a
     conditional upper bound and refutes the reciprocal equality under its own premises.
     The present paper proposes a \emph{projective persistence criterion}:
@@ -122,12 +124,12 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
     the Born--Infeld candidate action~\cite{Beau2026c} as a covariance of the response family and states
     the identification of the pair $\{c, q-c\}$ with a fibre of $\Pi$ as an open problem,
     so the pairing keeps the status of a structurally motivated hypothesis.
-    O19~\cite{Beau2026a23} completed this refinement by constructing a
-    canonical normalisation that removes residual pipeline-dependent
-    amplitude factors, yielding a unique, convention-free
-    observable~$\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$.
+    O19~\cite{Beau2026a23} proposes a case-dependent canonical normalisation intended to
+    remove residual pipeline-dependent amplitude factors, defining
+    $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$; its independence tests are open and its
+    pipeline independence is not established (O19 Open Problem~7.2).
 
-    At this stage, the observable is fixed, but a fundamental question
+    At this stage, the observable is proposed, but a fundamental question
     remains open.
     A supplied pair exponent near $7.44$ lies in the historical range $[7.4,10.6]$.
     Membership is a numerical comparison, not evidence that this range is physically required.
@@ -185,9 +187,10 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
     sequence of steps, each correcting the observable \emph{class} rather
     than the measurement itself.
     We summarise this hierarchy here; the purpose is to fix vocabulary
-    and to identify $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ as the
-    unique convention-free input to which the persistence criterion of
-    Section~\ref{sec:persistence-criterion} applies.
+    and to identify $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$, the observable proposed in O19,
+    as the input to which the persistence criterion of
+    Section~\ref{sec:persistence-criterion} applies; that it is convention-free is open
+    (O19 Open Problem~7.2).
 
     \subsection{Block-level observable}
       \label{sec:block-obs}
@@ -278,10 +281,11 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       combined with norm-invariance of the Gram--Schmidt process, implies
       that the raw span dynamics of $\rho_c$ and $\rho_{q-c}$ are
       identical under equal initial support (O17 Theorem~2.1).
-      The factor $r(c,q)$ appearing in the amplitude ratio
-      $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$ is consequently a
-      normalisation artefact of the pipeline, not an arithmetic invariant
-      of the representation (O17 Proposition~3.1).
+      Within O17's toy model, any variation of the factor $r(c,q)$ in the
+      amplitude ratio $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$ would be a property of
+      the normalisation, not of the representation (O17 Proposition~3.1); O17 does not
+      show this for the real O12/O13 pipeline, on which O16's conjugate-block identity
+      forces $r(c,q) \equiv 1$ within O16's contract.
       The unique structurally robust consequence is $\delta_{q-c} =
   \delta_c$, which is independent of pipeline normalisation.
 
@@ -330,19 +334,18 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       as an open bridge (O18 Remark~3.2).
 
       The pair observable $\sigma_{\mathrm{pair}}(n)$
-      of~\eqref{eq:sigma-pair} retains a residual amplitude factor
-      $r(c,q) \in \{1,2,3,4\}$ that depends on the Gram--Schmidt
-      initialisation parameters $(b_1, b_2)$ of the O12/O13 pipeline.
-      O19~\cite{Beau2026a23} resolved this by making explicit the implicit
-      normalisation factor $D(c, b_1, b_2, n)$ of the pipeline and
-      classifying the dependence structure of $r(c,q)$ via two
-      independence tests (Test~P2 and Test~P3).
+      of~\eqref{eq:sigma-pair} was reported to carry a residual amplitude factor
+      $r(c,q) \in \{1,2,3,4\}$ depending on the Gram--Schmidt
+      initialisation parameters $(b_1, b_2)$ of the O12/O13 pipeline; those values are a
+      historical hypothesis.
+      O19~\cite{Beau2026a23} makes explicit the implicit normalisation factor
+      $D(c, b_1, b_2, n)$ of the pipeline and formulates two independence tests
+      (Test~P2 and Test~P3) for $r(c,q)$, which are open.
       Three outcomes are possible: $r(c,q)$ is a pure basis artefact
       (Case~A), a discrete instance invariant (Case~B), or a mixed
       quantity admitting a decomposition
-      $r = r_{\mathrm{base}} \cdot r_{\mathrm{inst}}$ (Case~C); the
-      canonical normalisation appropriate to each case is constructed
-      explicitly.
+      $r = r_{\mathrm{base}} \cdot r_{\mathrm{inst}}$ (Case~C); for each case O19 proposes the
+      canonical normalisation that would follow, without identifying which case holds.
 
       \begin{definition}[Canonical pair observable, O19 Definition~7.1]
         \label{def:sigma-can}
@@ -355,10 +358,10 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
         with the canonical normalisation of O19 Section~7.
       \end{definition}
 
-      By O19 Proposition~7.2,
-      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is independent of the
+      Whether $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is independent of the
       choice of initial basis and block instance, up to corrections that
-      are $o(n^{-\delta_{\mathrm{pair}}})$ asymptotically.
+      are $o(n^{-\delta_{\mathrm{pair}}})$ asymptotically, is O19 Open Problem~7.2
+      (stated as Proposition~7.2 up to O19 version~1.2); it is not established.
       By O19 Proposition~9.1, the capacity exponent
       $\delta_{\mathrm{pair}}$ is unaffected by this canonicalisation: it
       is a property of the scaling law, not of the amplitude
@@ -377,11 +380,10 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ by a non-trivial
       normalisation factor depending on $(b_1,b_2)$ or on the block
       instance fails to define an intrinsic fibre-level quantity.
-      Up to asymptotically negligible corrections,
-      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is therefore the unique
-      observable compatible with the equivalence relation induced by the
-      projection $\Pi$, in the sense that it is invariant under all
-      transformations preserving fibre equivalence classes.
+      If that open problem were resolved positively,
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ would be invariant, up to asymptotically
+      negligible corrections, under all transformations preserving fibre equivalence classes;
+      neither this invariance nor uniqueness is established.
 
       The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
       is the starting point of the present paper.
@@ -420,17 +422,16 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       initialisation parameters $(b_1, b_2)$, and the BFS depth $n$,
       but with an asymptotically constant contribution in $n$ in the
       pre-saturation regime.
-      As a consequence, the amplitude of $\sigma_{\mathrm{pair}}(n)$
-      carries a residual factor $r(c,q) \in \{1,2,3,4\}$ whose value
-      depends on the choice of $(b_1, b_2)$ and, in general, on the
-      block instance.
+      Earlier work reported that, as a consequence, the amplitude of
+      $\sigma_{\mathrm{pair}}(n)$ carries a residual factor $r(c,q) \in \{1,2,3,4\}$
+      depending on the choice of $(b_1, b_2)$ and on the block instance; those values are
+      a historical hypothesis, and on the real pipeline O16's conjugate-block identity
+      forces $r(c,q) \equiv 1$ within O16's contract.
 
-      Two structural facts, established in O17 and confirmed in
-      O19~\cite{Beau2026a21,Beau2026a23}, bound the scope of this
-      dependence precisely.
-      First, $r(c,q)$ is a pipeline artefact, not an arithmetic invariant
-      of the Weil representation $\rho_c$: it does not reflect any
-      intrinsic property of the conjugate pair $\{c, q-c\}$.
+      Two statements bound the scope of this dependence.
+      First, within O17's toy model~\cite{Beau2026a21}, any variation of $r(c,q)$ is a
+      property of the normalisation, not an arithmetic invariant of the Weil
+      representation $\rho_c$; O17 does not show this for the real pipeline.
       Second, and crucially, the pipeline dependence is \emph{entirely at
   the amplitude level}: the asymptotic exponent
       $\delta_{\mathrm{pair}}$ is unaffected by any change of
@@ -446,11 +447,11 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
     \subsection{Canonical normalisation}
       \label{sec:canonical-def}
 
-      O19 makes $D(c, b_1, b_2, n)$ explicit and classifies the
-      dependence structure of $r(c,q)$ by two independence tests.
+      O19 makes $D(c, b_1, b_2, n)$ explicit and formulates two independence
+      tests for $r(c,q)$, which are open, so the case is not identified.
       Test~P2 varies the initial basis $(b_1, b_2)$ at fixed block
       instance; Test~P3 varies the block instance at rigidly fixed basis.
-      Three cases arise:
+      Three cases would arise:
       \begin{enumerate}[label=(\Alph*)]
   \item $r(c,q)$ is a pure basis artefact, eliminable by a
   canonical choice of initial frame;
@@ -460,9 +461,8 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
   combining both components, each eliminated by the corresponding
   procedure.
       \end{enumerate}
-      In each case, O19 Section~7 constructs the canonical normalisation
-      explicitly.
-      We import its output as a definition.
+      For each case, O19 Section~7 proposes the canonical normalisation that would follow.
+      We import it as a definition, conditional on which case holds.
 
       \begin{definition}[Canonical pair observable]
         \label{def:sigma-can-recap}
@@ -519,11 +519,13 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
         operates strictly at the amplitude level.
         The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
         is required in the present paper not to change the exponent, but
-        to ensure that the persistence threshold $\sigma_{\mathrm{BI}}$ of
-        Section~\ref{sec:persistence-criterion} is evaluated on a
+        so that the persistence threshold $\sigma_{\mathrm{BI}}$ of
+        Section~\ref{sec:persistence-criterion} would be evaluated on a
         convention-free quantity: a threshold condition applied to a
-        pipeline-dependent amplitude would inherit the arbitrary
-        factor~$r(c,q)$ and lose physical meaning.
+        pipeline-dependent amplitude would inherit any non-trivial
+        factor~$r(c,q)$.
+        Since O19's independence tests are open, this is a requirement on the observable, not a
+        property established for it.
       \end{remark}
 
 
@@ -532,8 +534,8 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
 
     We now formulate the central criterion of this paper.
     The canonical observable $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
-    established in O19~\cite{Beau2026a23} is a pipeline-independent
-    quantity; the question is what dynamical condition it must satisfy
+    proposed in O19~\cite{Beau2026a23}, whose pipeline independence is an open
+    problem, is the observable considered; the question is what dynamical condition it must satisfy
     for the fibre $\{c, q-c\}$ to be physically admissible.
 
     \begin{hypothesis}[Monotone amplitude correspondence]
@@ -598,10 +600,10 @@ A Dynamical Selection Criterion for the Capacity Exponent\\[0.5ex]
       \label{rem:H1-motivation}
       The identification postulated in Hypothesis~\ref{hyp:H1} is not
       arbitrary.
-      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is the only scalar
-      observable canonically associated with fibre-level redundancy growth
-      that is invariant under all admissible normalisations of the
-      pipeline (O19 Proposition~7.2).
+      $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ is proposed in O19 as the scalar
+      observable canonically associated with fibre-level redundancy growth that would be
+      invariant under admissible normalisations of the pipeline; that invariance is O19
+      Open Problem~7.2, not a result.
       A saturating amplitude is the only structural quantity exhibiting
       comparable monotone depletion behaviour under the Born--Infeld
       constraint.

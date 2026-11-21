@@ -8,6 +8,13 @@ the next structural issue left open by **O19**:
 > Given a supplied observable, threshold and power law, which exponent interval corresponds to
 > a crossing within a specified cascade window?
 
+**Version 1.18.** O19 1.3 withdraws its claim to construct a pipeline-independent canonical
+observable: its independence tests P2/P3 are open and its former Proposition 7.2 is now Open
+Problem 7.2. O20 uses the O19 canonical observable as a proposed, case-dependent observable, not as a
+constructed convention-free one. The values $r(c,q)\in\{1,2,3,4\}$ are a historical hypothesis; on the
+real O12/O13 pipeline O16's conjugate-block identity forces $r\equiv1$ within its contract, and O17's
+normalisation statement is internal to its toy model.
+
 **Version 1.17.** The former physical interpretation of $[7.4,10.6]$ is withdrawn.
 O6 proves only $\beta_{\mathrm{eff}}\leq1/(\alpha+1/2)$ under its effective growth hypothesis
 (G_R) and a power-law redundancy Ansatz in the exploration variable $p$.
@@ -17,26 +24,24 @@ is neither a necessary nor a sufficient condition selecting the charged-lepton c
 
 # Context
 
-**O19** established that:
+**O19** proposes:
 
-- the physically relevant observable is the **canonical pair-level**
-  quantity
+- a case-dependent **canonical pair-level** observable
   \[
   \sigma_{\mathrm{pair}}^{\mathrm{can}}(n)
   \]
-- the residual amplitude ambiguity inherited from the O12/O13
-  Gram–Schmidt pipeline can be removed canonically
-- the exponent \(\delta_{\mathrm{pair}}\) is invariant under this
-  canonicalisation
+  intended to remove a residual amplitude ambiguity of the O12/O13 Gram–Schmidt pipeline;
+  its independence tests are open and its pipeline independence is not established
+- that a constant normalisation factor leaves the exponent \(\delta_{\mathrm{pair}}\) unchanged
 - the measured fibre-level exponent remains
   \[
   \delta_{\mathrm{pair}} \approx 7.44
   \]
 
-This closed the normalisation problem of **O19**:
+The normalisation problem therefore remains open:
 
-- the observable class had already been fixed by **O16–O18**
-- the amplitude is now canonically normalised
+- the observable class is motivated by **O16–O18** (its fibre reading is an open bridge)
+- the amplitude normalisation is the open proposal of **O19**
 - the threshold-crossing template must determine its own symbolic interval;
   it supplies no physical restriction to the historical range $[7.4,10.6]$
 
@@ -111,7 +116,7 @@ The paper starts from the hierarchy established by O12–O19:
 The key point is:
 
 > O20 does not redefine the observable.  
-> It uses the canonical fibre-level observable already fixed by O19.
+> It uses the canonical fibre-level observable proposed by O19, whose normalisation is open.
 
 ## 2. Block-level mismatch is now definitively bypassed
 
@@ -125,7 +130,7 @@ The paper recalls that:
 - O15 studies specified conditional reweighting and aggregation procedures for the block data
 - O16–O18 motivate the pair-level observable (the reading of pairs as fibres of \(\Pi\)
   remains the open bridge of O18 Remark 3.2)
-- O19 made this pair-level observable canonical at the amplitude level
+- O19 proposes a canonical amplitude normalisation for this pair-level observable, with open tests
 
 O20 studies a pair-level observable; this change alone does not select a physical rate.
 
@@ -194,7 +199,7 @@ It does not convert $[7.4,10.6]$ into a derived physical selection window.
 
 More precisely, the paper does the following:
 
-- imports the canonical observable from O19
+- imports the canonical observable proposed in O19, conditional on its open case
 - formulates two explicit structural hypotheses
 - derives a necessary and sufficient threshold-crossing condition
 - translates that condition into an admissible interval for
@@ -219,10 +224,10 @@ A major feature of O20 is that it separates clearly:
 - the existence of the power-law regime
 - the measured value \(\delta_{\mathrm{pair}}\approx 7.44\)
 - the necessity of the pair-level observable (its fibre reading is an open bridge, O18 Remark 3.2)
-- the canonical amplitude normalisation of O19
 
 ## Conditional proposal
 
+- the canonical amplitude normalisation proposed in O19 (open tests, Open Problem 7.2)
 - the identification of persistence with threshold crossing
 - the interpretation of
   \(\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)\)
@@ -269,13 +274,13 @@ O20 occupies a very specific place in the O-series:
 - **O17**: pair dynamics derived
 - **O18**: Born–Infeld parity established as a covariance of the response family; the fibre identification
   stated as an open problem
-- **O19**: canonical amplitude normalisation derived
+- **O19**: canonical amplitude normalisation proposed, with open tests
 - **O20**: conditional threshold-crossing template, with no selected numerical exponent window
 
 Thus:
 
 - the observable is structurally motivated (its fibre reading remains an open bridge)
-- the amplitude is canonical
+- the amplitude normalisation is an open proposal
 - a supplied threshold defines a symbolic crossing interval; its physical interpretation remains conditional
 
 Neither the persistence criterion nor a later fibre identification repairs the false O6/O7 equality.
@@ -308,13 +313,13 @@ The reciprocal evaluation remains a legacy numerical comparison.
 The spectral admissibility framework is now:
 
 - parity-equivariant at the Born–Infeld level (**O18**), with the fibre identification open
-- amplitude-level canonical (**O19**)
+- amplitude normalisation proposed, with open tests (**O19**)
 - persistence-level structured (**O20**)
 
 The pair observable is now:
 
 - structurally motivated (fibre identification open, O18 Problem 2.8)
-- canonically normalised
+- normalised by an open proposal
 - equipped with a conditional physical admissibility criterion
 
 # Residual Open Problems
@@ -347,7 +352,7 @@ The programme is now:
 
 - observationally well-defined (**O17**)
 - parity-equivariant, with the fibre identification stated as an open problem (**O18**)
-- canonically normalised (**O19**)
+- with an open canonical normalisation (**O19**)
 - conditionally selection-based (**O20**)
 
 Remaining work is now concentrated on:
