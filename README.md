@@ -34,7 +34,8 @@ is neither a necessary nor a sufficient condition selecting the charged-lepton c
   intended to remove a residual amplitude ambiguity of the O12/O13 Gram–Schmidt pipeline;
   its independence tests are open and its pipeline independence is not established
 - that a constant normalisation factor leaves the exponent \(\delta_{\mathrm{pair}}\) unchanged
-- the historical comparison value \(\delta_{\mathrm{pair}} \approx 7.44\), which O16 no longer asserts
+
+The historical comparison value \(\delta_{\mathrm{pair}} \approx 7.44\) is not asserted by O16.
 
 The normalisation problem therefore remains open:
 
