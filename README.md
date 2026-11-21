@@ -8,7 +8,8 @@ the next structural issue left open by **O19**:
 > Given a supplied observable, threshold and power law, which exponent interval corresponds to
 > a crossing within a specified cascade window?
 
-**Version 1.18.** O19 1.3 withdraws its claim to construct a pipeline-independent canonical
+**Version 1.18.** The historical value $\delta_{\mathrm{pair}}\approx7.44$ is no longer attributed to O16,
+which asserts no numerical exponent. O19 1.3 withdraws its claim to construct a pipeline-independent canonical
 observable: its independence tests P2/P3 are open and its former Proposition 7.2 is now Open
 Problem 7.2. O20 uses the O19 canonical observable as a proposed, case-dependent observable, not as a
 constructed convention-free one. The values $r(c,q)\in\{1,2,3,4\}$ are a historical hypothesis; on the
@@ -33,10 +34,7 @@ is neither a necessary nor a sufficient condition selecting the charged-lepton c
   intended to remove a residual amplitude ambiguity of the O12/O13 Gram–Schmidt pipeline;
   its independence tests are open and its pipeline independence is not established
 - that a constant normalisation factor leaves the exponent \(\delta_{\mathrm{pair}}\) unchanged
-- the measured fibre-level exponent remains
-  \[
-  \delta_{\mathrm{pair}} \approx 7.44
-  \]
+- the historical comparison value \(\delta_{\mathrm{pair}} \approx 7.44\), which O16 no longer asserts
 
 The normalisation problem therefore remains open:
 
@@ -204,10 +202,7 @@ More precisely, the paper does the following:
 - derives a necessary and sufficient threshold-crossing condition
 - translates that condition into an admissible interval for
   \(\delta_{\mathrm{pair}}\)
-- shows that the measured value
-  \[
-  \delta_{\mathrm{pair}} \approx 7.44
-  \]
+- shows that a supplied value such as the historical \(\delta_{\mathrm{pair}} \approx 7.44\)
   can be compared numerically with the historical range, without fixing either endpoint
 
 The central point is:
@@ -221,8 +216,7 @@ A major feature of O20 is that it separates clearly:
 
 ## Established input
 
-- the existence of the power-law regime
-- the measured value \(\delta_{\mathrm{pair}}\approx 7.44\)
+- a power-law regime for the uncorrected pair observable
 - the necessity of the pair-level observable (its fibre reading is an open bridge, O18 Remark 3.2)
 
 ## Conditional proposal
